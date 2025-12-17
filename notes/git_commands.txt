@@ -1,0 +1,30 @@
+0. Clone the repo: `git clone URL`
+1. Pull the changes: `git pull`
+2. Make the changes: Add, remove, modify files
+3. Stage the changes: `git add file/folder`
+4. Commit the changes: `git commit -m "Commit Message"`
+5. Push the changes: `git push origin branch`
+
+main: Vanilla Code(Stable and tested)[NEVER PUSH TO MAIN]
+dev: Developers(src/main),experiments
+	dev1:
+	dev2:
+test: Testers(src/test) , Stable but untested
+
+main -> dev  -> test -> main
+
+
+Merge:
+ 
+git merge: 
+	Safer option()
+	1. Switch to destination branch- git checkout destbranch
+	2.Merge: git merge srcbranch  / git rebase srcbranch
+
+	git merge: only the LATEST COMMIT IS MERGED to the MAIN branch
+
+* git rebase: 
+	-destructive option
+	-copies EVERY COMMIT to the MAIN branch
+	-Also the timeline of commits changes
+	-Conflicting commits are overridden

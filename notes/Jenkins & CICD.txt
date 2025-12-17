@@ -1,0 +1,8 @@
+Jenkins & CI/CD:
+
+-Automation tool that runs on Java and Linux
+-Automation server
+-Automates all sorts of tasks building,testing,delivering and deploying.
+- Fetches from Repository
+-git fetch: Fetches all the codes and downloads into the test environment
+-Schedule time of running in Linux using Crontab

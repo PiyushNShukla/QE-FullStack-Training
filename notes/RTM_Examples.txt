@@ -1,0 +1,112 @@
+Scenario 1: Basic E-commerce Checkout Feature
+This scenario focuses on basic functional requirements and their direct test cases.
+Requirements (Needs to be Traced):
+ID      | Description (Functional Requirement)
+-----------------------------------------------
+FR-001  | The system SHALL allow the user to input a valid 16-digit credit card number.
+FR-002  | The system SHALL calculate the total order price, including a 10% sales tax, before finalizing the payment.
+FR-003  | The system SHALL validate the payment and display a confirmation page to the user within 3 seconds.
+NFR-001 | The checkout process SHALL be accessible on mobile devices. (Non-Functional Requirement)
+
+Your Practice Task:
+* Create an RTM table.
+* For each requirement, create at least two unique test cases (one positive, one negative/validation, where appropriate).
+* Fill in the Test Case ID and a brief description for each test case, linking them back to the Requirement ID.
+
+Sample:
+Requirement ID | Requirement Description | Test Case ID | Test Case Description                             | Status (Pass/Fail)
+FR-001         | ...                     | TC-001       | Verify payment with a valid 16-digit card number. | 
+FR-001         | ...                     | TC-002       | Verify system rejects an 18-digit card number.    | 
+FR-002         | ...                     | ...          | ...
+
+==============================================================================================================================================================================================
+
+Scenario 2: Software Update and Configuration Panel
+This scenario introduces different requirement types (Security, Usability, Functional) and a many-to-many relationship (one test case covers multiple requirements, or vice versa).
+Requirements:
+ID     | Type       | Description
+FR-101 | Functional | The application SHALL check for a new server update upon startup.
+FR-102 | Functional | The user SHALL be able to select between "Auto-Update" and "Manual-Update" in the Settings panel.
+SR-103 | Security   | The update communication channel SHALL use HTTPS protocol for data transfer.
+UR-104 | Usability  | The "Check for Update" button SHALL be clearly labeled and positioned on the main dashboard.
+
+Test Cases (Pre-defined):
+ID     | Description
+TC-101 | Verify that the application fails gracefully when the update server is inaccessible at startup.
+TC-102 | Verify the system initiates an update download when "Auto-Update" is selected and a new version is available.
+TC-103 | Use a network sniffer tool to confirm the update download request uses port 443 (HTTPS).
+TC-104 | Perform a User Interface (UI) inspection to confirm the button label and location.
+
+Your Practice Task:
+* Create an RTM table.
+* Establish Traceability: For each Test Case (TC), determine which Requirement ID(s) it successfully traces and validates. Note: One test case may trace multiple requirements.
+* Identify Gaps: Which Requirement is not fully covered by the provided test cases? Create a new test case to cover that gap.
+
+Solution:
+* Gap Identified (FR-101): The provided TC-101 only tested the negative path (server down). The RTM highlighted the need for a test case to cover the positive path (new update successfully detected). This was filled by TC-105 (NEW).
+* Gap Identified (FR-102): The provided TC-102 only tested the "Auto-Update" option. The RTM requires a test for the "Manual-Update" option, which was also included in TC-105 (NEW).
+* Many-to-Many Relationship: The newly created TC-105 is an example of a single test case tracing and covering two requirements: FR-101 (update check at startup) and FR-102 (Manual-Update selection).
+
+==============================================================================================================================================================================================
+
+Scenario 3: Third-Party API Integration and Performance
+This scenario introduces requirements related to external dependencies and system performance under load for a flight booking system integrates with an external Payment Gateway API.
+Requirements:
+ID     | Type        | Description
+FR-301 | Functional  | The system SHALL handle both successful (HTTP 200) and failed (HTTP 4xx/5xx) responses from the Payment Gateway API.
+PR-302 | Performance | The response time for a payment transaction (from submission to confirmation page display) SHALL not exceed 4 seconds under a normal load of 50 concurrent users.
+TR-303 | Technical   | If the Payment Gateway API is unresponsive, the system SHALL retry the connection two times before displaying an error.
+
+Your Practice Task:
+* Trace Test Cases to Requirements: Create appropriate test cases for each requirement.
+    * Hint for PR-402: This requires a specific type of test (Load Test).
+    * Hint for FR-401: You'll need at least three test cases to cover the different HTTP response scenarios.
+* Focus on Specifics: Ensure your Test Case Descriptions explicitly reference the performance metric (4 seconds) and the retry count (two times).
+
+==============================================================================================================================================================================================
+
+Scenario 4: Complex Workflow (Hospital Patient Intake)
+This advanced scenario requires tracing requirements across multiple phases (Forward Traceability) and tracing a requirement backward to a high-level objective (Backward Traceability).
+High-Level Business Objective (Backward Trace):
+* BO-001: Reduce patient intake time by 20% by digitizing forms.
+
+Requirements & Design Elements (Forward Trace):
+ID     | Type       | Description
+FR-401 | Functional | The system SHALL present the intake form fields in a logical, step-by-step wizard format.
+UI-402 | Design     | A progress bar SHALL be displayed at the top of the screen showing the user's completion status.
+FR-403 | Functional | Patient data SHALL be validated instantly upon submitting each page (e.g., date of birth format).
+
+Your Practice Task:
+* Design the RTM Header: Create an RTM table with columns for Business Objective, Requirement ID, Design Element ID, and Test Case ID.
+* Define Test Cases: Create at least one Test Case (TC) for each Functional Requirement (FR) and Design Element (UI).
+* Complete the Trace:
+  * Ensure Forward Traceability: FR-401 -> UI-402 -> TC-XXX
+  * Ensure Backward Traceability: FR-401 -> BO-001
+
+Solution:
+Backward Traceability (Justification): Notice how FR-201 (The Wizard format) is directly linked back to BO-001 (Reduce intake time). If the test case TC-202 (Performance Test) fails, it indicates that FR-201 is not meeting the business objective, proving the feature is not justified.
+Forward Traceability (Validation): FR-201 (Wizard format) leads directly to the design element UI-202 (Progress Bar), which is then tested by TC-203. This shows that the original requirement led to a specific design choice, which was then validated by testing.
+Cross-Discipline Linkage: This RTM connects the Business/Product team (BO-001) with the Development/Design team (UI-202) and the QA team (TC-202), ensuring everyone is aligned on the purpose and validation of the feature.
+
+==============================================================================================================================================================================================
+
+Scenario 5: Inventory Optimization for Warehouse Management
+This advanced scenario links high-level financial goals to granular technical design requirements, which is typical in large enterprise projects.
+
+High-Level Financial Objective:
+ID     | Description (Financial Goal)
+FO-501 | Decrease holding inventory costs by 15% by implementing dynamic reorder points based on real-time sales data.
+
+Requirements & Technical Designs (The Implementation):
+ID      | Type           | Description
+DR-501  | Design         | The new database model SHALL include a 'Rolling Average Sales' field, calculated nightly.
+FR-502  | Functional     | The system SHALL alert the warehouse manager when inventory for a SKU drops below its dynamically calculated reorder point.
+NFR-503 | Non-Functional | The system SHALL calculate and update the reorder points for all 50,000 SKUs within a 4-hour maintenance window.
+
+Your Practice Task:
+* Trace the Design: Demonstrate how the low-level DR-301 (a specific database design field) is required to meet FO-301.
+* RTM Mapping: Create a full RTM linking all requirements/designs back to FO-301.
+* Justification Statement: In your RTM, include a column called "Justification" and write a short sentence for DR-301 explaining why a database field is necessary to achieve the 15% cost reduction.
+
+Solution:
+DR-301 Justification: The 'Rolling Average Sales' database field is necessary because the Financial Objective (FO-301) requires dynamic reorder points. The dynamic reorder points cannot be calculated without an accessible, consistent, and pre-calculated metric of recent sales velocity. Therefore, this low-level design element is the prerequisite data mechanism needed to support the functional requirement (FR-302) that drives the overall inventory cost reduction.

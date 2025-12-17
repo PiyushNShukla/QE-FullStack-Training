@@ -1,0 +1,49 @@
+Scenario 1: A system managing books, users, and borrowing/returning processes in an online library.
+Task for Practice: Draw a Use Case Diagram to model the main functions of the system.
+
+Key Elements to Include:
+Actors:
+* Patron (A user who borrows books).
+* Librarian (Staff who manages the book inventory).
+
+Use Cases:
+* Patron: Search for Book, Place Hold on Book, Borrow Book, Return Book, View Account Status.
+* Librarian: Add New Book to Inventory, Check Book Out to Patron, Generate Overdue Report.
+* Relationships: Use <<include>> or <<extend>> relationships where relevant. For example: Borrow Book <<include>> Authenticate User.
+
+
+Scenario 2: A simple system to manage different types of bank accounts.
+Task for Practice: Draw a Class Diagram representing the key entities and their relationships.
+
+Key Classes to Include:
+* Account (Abstract Class):
+  * Attributes: accountNumber, balance.
+  * Operations: deposit(), withdraw(), getBalance().
+* CheckingAccount (Derived from Account).
+* SavingsAccount (Derived from Account):
+  * Additional Attribute: interestRate.
+* Customer:
+  * Attributes: customerID, name, address.
+* Key Relationships:
+  * Generalization: CheckingAccount and SavingsAccount inherit from Account.
+  * Association: Customer has an association with Account (a Customer can have one or more Accounts).
+
+
+
+
+
+Scenario 3: A user attempts to log into a web application, and the system processes the request through various layers.
+Task for Practice: Draw a Sequence Diagram to model the successful login process, including the steps involving the User, the Web Server, the Authentication Service, and the Database.
+
+Key Elements to Include:
+
+* Columns: User, WebServer, AuthenticationService, Database.
+* Messages: loginRequest(username, password), authenticate(), queryUser(), userData, loginSuccess(token).
+* Interaction Fragment (Alt/Opt): A fragment to show the alternative path for a Failed Login (e.g., if the password check fails).
+* Activation Bars (showing the time an object is actively performing an operation).
+
+Testing Relevance: This diagram is essential for Integration Testing and System Testing because it helps a tester:
+* Verify the correct order and flow of messages between components.
+* Design test cases to check the system's behavior when messages are missing or out of sequence.
+* Ensure security validations (like passing a security token) occur at the correct stage.
+* Easily define both the success path and failure path test cases (e.g., successful login vs. invalid credentials).
