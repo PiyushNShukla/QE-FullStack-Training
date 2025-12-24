@@ -5,14 +5,16 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-import java.util.SortedSet;
-import java.util.TreeSet;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -22,10 +24,14 @@ import com.ibm.WebApp.util.PictureUtility;
 public class TestMyWebApp {
 	static WebDriver driver;
 	static Alert al;
+	static Action act;
+	static Actions acts;
+	static JavascriptExecutor js;
 	public static void setup()
 	{
 		driver =new FirefoxDriver();
 		driver.manage().window().maximize();
+		acts =  new Actions(driver);
 //		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		}
 	
@@ -105,17 +111,35 @@ public class TestMyWebApp {
 				
 			}
 		}
-		public static void tearDown()
+		
+		public static void handleKeyboard() throws InterruptedException {
+			js = (JavascriptExecutor) driver;
+			
+			js.executeScript("window.scrollBy(0, 450)");
+			
+			Action a =  acts	.click(driver.findElement(By.name("un"))).keyDown(Keys.SHIFT).sendKeys("piyush13232").build();
+			
+			Thread.sleep(5000);
+			a.perform();
+		}
+		
+		
+		
+		public static void tearDown() throws InterruptedException
 		{
+			Thread.sleep(3000);
 			driver.quit();
 		}
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 		setup();
 		getApp();
-		navigate();
+		Thread.sleep(3000);
+		//navigate();
 		//selectFromDropDown();
-		readTableData();
+		//readTableData();
+		handleKeyboard();
+		
 		tearDown();
 	}
 }
