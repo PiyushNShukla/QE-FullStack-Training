@@ -1,11 +1,15 @@
 package com.ibm.WebApp;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -27,6 +31,27 @@ public class TestMyWebApp {
 	static Action act;
 	static Actions acts;
 	static JavascriptExecutor js;
+	static XSSFWorkbook wb;
+	static XSSFSheet sh;
+	static FileInputStream fin;
+	static File fileDataSheet;
+	
+	
+	public static void testLoginWithMultipleDataSet() throws IOException {
+		fileDataSheet=new File("C:/Users/PiyushShukla/Desktop/Training/Git/QE-FullStack-Training/codes/Credentials.xlsx");
+		fin=new FileInputStream(fileDataSheet);
+		wb=new XSSFWorkbook(fin);
+		sh=wb.getSheet("Login");
+		for(int i=1;i<=sh.getLastRowNum();i++)
+		{
+			driver.findElement(By.name("un")).sendKeys(sh.getRow(i).getCell(0).getStringCellValue());
+			driver.findElement(By.name("pw")).sendKeys(sh.getRow(i).getCell(1).getStringCellValue());
+			driver.findElement(By.name("login")).click();
+		}
+		
+		
+		
+	}
 	public static void setup()
 	{
 		driver =new FirefoxDriver();
@@ -138,8 +163,8 @@ public class TestMyWebApp {
 		//navigate();
 		//selectFromDropDown();
 		//readTableData();
-		handleKeyboard();
-		
+		//handleKeyboard();
+		testLoginWithMultipleDataSet();
 		tearDown();
 	}
 }
