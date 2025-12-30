@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.saucedemo.testng.LoginTest">
+      <class name="com.saucedemo.testng.tests.ProductsTest">
         <methods>
+          <include name="setUp"/>
+          <include name="verifyMenuButtonisClickable"/>
           <include name="tearDown"/>
-          <include name="loginWithValidCredentials"/>
-          <include name="setup"/>
-          <include name="openAppTest"/>
         </methods>
-      </class> <!-- com.saucedemo.testng.LoginTest -->
+      </class> <!-- com.saucedemo.testng.tests.ProductsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,7 +2,8 @@
 <suite parallel="false" name="Suite">
   <test name="Test">
     <classes>
-      <class name="com.saucedemo.testng.LoginTest"/>
+      <class name="com.saucedemo.testng.tests.LoginTest"/>
+      <class name="com.saucedemo.testng.tests.ProductsTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

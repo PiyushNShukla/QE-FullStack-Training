@@ -3,14 +3,13 @@
 <suite name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.ibm.test.LoginTest">
+      <class name="com.saucedemo.testng.tests.ProductsTest">
         <methods>
-          <include name="verifyLoginWithInvalidUsernameAndValidPassword"/>
-          <include name="verifyLoginWithValidUsernameAndInvalidPassword"/>
-          <include name="verifyLoginWithValidCredential"/>
-          <include name="verifyRegistration"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyProductsPageLoads"/>
         </methods>
-      </class> <!-- com.ibm.test.LoginTest -->
+      </class> <!-- com.saucedemo.testng.tests.ProductsTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
