@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-12-31T18:18:21 IST" name="Suite" finished-at="2025-12-31T18:18:42 IST" duration-ms="20996">
+    <groups>
+    </groups>
+    <test started-at="2025-12-31T18:18:21 IST" name="Home Page Test" finished-at="2025-12-31T18:18:31 IST" duration-ms="10706">
+      <class name="testCases.HomePageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.HomePageTest@1d296da]" started-at="2025-12-31T18:18:21 IST" name="setup" finished-at="2025-12-31T18:18:25 IST" duration-ms="4315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setUpPage()[pri:0, instance:testCases.HomePageTest@1d296da]" started-at="2025-12-31T18:18:25 IST" name="setUpPage" finished-at="2025-12-31T18:18:25 IST" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method signature="verifyLogo()[pri:0, instance:testCases.HomePageTest@1d296da]" started-at="2025-12-31T18:18:25 IST" name="verifyLogo" finished-at="2025-12-31T18:18:26 IST" duration-ms="677" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogo -->
+        <test-method is-config="true" signature="setUpPage()[pri:0, instance:testCases.HomePageTest@1d296da]" started-at="2025-12-31T18:18:26 IST" name="setUpPage" finished-at="2025-12-31T18:18:26 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method signature="verifyNewsLetter()[pri:0, instance:testCases.HomePageTest@1d296da]" started-at="2025-12-31T18:18:26 IST" name="verifyNewsLetter" finished-at="2025-12-31T18:18:28 IST" duration-ms="2161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNewsLetter -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.HomePageTest@1d296da]" started-at="2025-12-31T18:18:28 IST" name="tearDown" finished-at="2025-12-31T18:18:31 IST" duration-ms="3436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.HomePageTest -->
+    </test> <!-- Home Page Test -->
+    <test started-at="2025-12-31T18:18:31 IST" name="Pactice Page Test" finished-at="2025-12-31T18:18:42 IST" duration-ms="10171">
+      <class name="testCases.PracticePageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.PracticePageTest@2cd76f31]" started-at="2025-12-31T18:18:31 IST" name="setup" finished-at="2025-12-31T18:18:35 IST" duration-ms="3560" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setUpPage()[pri:0, instance:testCases.PracticePageTest@2cd76f31]" started-at="2025-12-31T18:18:35 IST" name="setUpPage" finished-at="2025-12-31T18:18:35 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method signature="testNavigation()[pri:0, instance:testCases.PracticePageTest@2cd76f31]" started-at="2025-12-31T18:18:35 IST" name="testNavigation" finished-at="2025-12-31T18:18:38 IST" duration-ms="3099" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavigation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.PracticePageTest@2cd76f31]" started-at="2025-12-31T18:18:38 IST" name="tearDown" finished-at="2025-12-31T18:18:42 IST" duration-ms="3486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.PracticePageTest -->
+    </test> <!-- Pactice Page Test -->
+  </suite> <!-- Suite -->
+</testng-results>
