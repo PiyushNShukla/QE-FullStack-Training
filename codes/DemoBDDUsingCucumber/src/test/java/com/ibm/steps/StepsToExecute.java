@@ -5,7 +5,10 @@ import java.time.Duration;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -33,7 +36,7 @@ public class StepsToExecute {
 	
 	@After
 	public void tearDown() throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		driver.quit();
 	}
 	
@@ -44,12 +47,20 @@ public class StepsToExecute {
 	    
 	}
 
-	@When("User enters correct username and password")
-	public void user_enters_correct_username_and_password() {
-		driver.findElement(By.name("username")).sendKeys("student");
-		driver.findElement(By.id("password")).sendKeys("Password123");
-	    
+	@When("User enters {string} and {string}")
+	public void user_enters_and(String user, String pass) {
+		System.out.println("Username:"+user+"\n"+"Password:"+pass);
+	    // Write code here that turns the phrase above into concrete actions
+		driver.findElement(By.name("username")).sendKeys(user);
+		driver.findElement(By.id("password")).sendKeys(pass);
 	}
+
+//	@When("User enters correct username and password")
+//	public void user_enters_correct_username_and_password() {
+//		driver.findElement(By.name("username")).sendKeys("student");
+//		driver.findElement(By.id("password")).sendKeys("Password123");
+//	    
+//	}
 
 	@When("User clicks login button")
 	public void user_clicks_login_button() {
@@ -59,6 +70,8 @@ public class StepsToExecute {
 
 	@Then("User lands on Welcome Page")
 	public void user_lands_on_welcome_page() {
-	    Assert.assertTrue(driver.findElement(By.xpath("//a[contains(text(),'Log out')]")).isDisplayed());
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebElement logOut=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'Log out')]")));
+	    Assert.assertTrue(logOut.isDisplayed());
 	}
 }

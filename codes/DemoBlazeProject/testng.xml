@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Cucumber Suite" parallel="flase">
+
+    <test name="Cucumber Tests">
+        <classes>
+            <class name="com.ibm.runners.TestRunner"/>
+        </classes>
+    </test>
+
+</suite>
