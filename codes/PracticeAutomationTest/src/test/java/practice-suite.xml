@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Suite">
   <test name="Home Page Test">
+  
     <classes>
       <class name="testCases.HomePageTest"/>
     </classes>
   </test> <!-- Test -->
   <test name="Pactice Page Test">
+  
   <classes>
   	<class name="testCases.PracticePageTest"/>
-  	
+  	 
   </classes>
   
   </test>

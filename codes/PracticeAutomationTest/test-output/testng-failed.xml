@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <test thread-count="5" name="Pactice Page Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.PracticePageTest">
+      <class name="testCases.TablePageTest">
         <methods>
+          <include name="verifyCourseNameSort"/>
           <include name="setup"/>
-          <include name="testNavigation"/>
           <include name="tearDown"/>
+          <include name="setUpPage"/>
         </methods>
-      </class> <!-- testCases.PracticePageTest -->
+      </class> <!-- testCases.TablePageTest -->
     </classes>
-  </test> <!-- Pactice Page Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

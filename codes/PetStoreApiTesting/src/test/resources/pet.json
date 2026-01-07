@@ -1,0 +1,18 @@
+{
+  "id": 101,
+  "category": {
+    "id": 1,
+    "name": "cat"
+  },
+  "name": "Sparkles",
+  "photoUrls": [
+    "Sparkles"
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "string"
+    }
+  ],
+  "status": "available"
+}

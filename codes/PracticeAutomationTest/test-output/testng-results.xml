@@ -1,57 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-31T18:18:21 IST" name="Suite" finished-at="2025-12-31T18:18:42 IST" duration-ms="20996">
+  <suite started-at="2026-01-04T19:37:43 IST" name="Default suite" finished-at="2026-01-04T19:38:13 IST" duration-ms="30158">
     <groups>
     </groups>
-    <test started-at="2025-12-31T18:18:21 IST" name="Home Page Test" finished-at="2025-12-31T18:18:31 IST" duration-ms="10706">
-      <class name="testCases.HomePageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.HomePageTest@1d296da]" started-at="2025-12-31T18:18:21 IST" name="setup" finished-at="2025-12-31T18:18:25 IST" duration-ms="4315" status="PASS">
+    <test started-at="2026-01-04T19:37:43 IST" name="Default test" finished-at="2026-01-04T19:38:13 IST" duration-ms="30158">
+      <class name="testCases.TablePageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:37:43 IST" name="setup" finished-at="2026-01-04T19:37:48 IST" duration-ms="5101" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUpPage()[pri:0, instance:testCases.HomePageTest@1d296da]" started-at="2025-12-31T18:18:25 IST" name="setUpPage" finished-at="2025-12-31T18:18:25 IST" duration-ms="41" status="PASS">
+        <test-method is-config="true" signature="setUpPage()[pri:0, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:37:48 IST" name="setUpPage" finished-at="2026-01-04T19:37:48 IST" duration-ms="114" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method signature="verifyLogo()[pri:0, instance:testCases.HomePageTest@1d296da]" started-at="2025-12-31T18:18:25 IST" name="verifyLogo" finished-at="2025-12-31T18:18:26 IST" duration-ms="677" status="PASS">
+        <test-method signature="verifyJavaCourses()[pri:1, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:37:48 IST" name="verifyJavaCourses" finished-at="2026-01-04T19:37:52 IST" duration-ms="3453" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLogo -->
-        <test-method is-config="true" signature="setUpPage()[pri:0, instance:testCases.HomePageTest@1d296da]" started-at="2025-12-31T18:18:26 IST" name="setUpPage" finished-at="2025-12-31T18:18:26 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- verifyJavaCourses -->
+        <test-method signature="verifyBeginnerCourses()[pri:2, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:37:52 IST" name="verifyBeginnerCourses" finished-at="2026-01-04T19:37:54 IST" duration-ms="2528" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBeginnerCourses -->
+        <test-method is-config="true" signature="setUpPage()[pri:0, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:37:52 IST" name="setUpPage" finished-at="2026-01-04T19:37:52 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPage -->
-        <test-method signature="verifyNewsLetter()[pri:0, instance:testCases.HomePageTest@1d296da]" started-at="2025-12-31T18:18:26 IST" name="verifyNewsLetter" finished-at="2025-12-31T18:18:28 IST" duration-ms="2161" status="PASS">
+        <test-method is-config="true" signature="setUpPage()[pri:0, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:37:54 IST" name="setUpPage" finished-at="2026-01-04T19:37:54 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyNewsLetter -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.HomePageTest@1d296da]" started-at="2025-12-31T18:18:28 IST" name="tearDown" finished-at="2025-12-31T18:18:31 IST" duration-ms="3436" status="PASS">
+        </test-method> <!-- setUpPage -->
+        <test-method signature="verifyEnrollment()[pri:3, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:37:54 IST" name="verifyEnrollment" finished-at="2026-01-04T19:37:57 IST" duration-ms="2460" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEnrollment -->
+        <test-method is-config="true" signature="setUpPage()[pri:0, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:37:57 IST" name="setUpPage" finished-at="2026-01-04T19:37:57 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method signature="verifyMixedCondition()[pri:4, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:37:57 IST" name="verifyMixedCondition" finished-at="2026-01-04T19:38:01 IST" duration-ms="3936" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMixedCondition -->
+        <test-method signature="verifyNoMatchingCase()[pri:5, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:38:01 IST" name="verifyNoMatchingCase" finished-at="2026-01-04T19:38:03 IST" duration-ms="2150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNoMatchingCase -->
+        <test-method is-config="true" signature="setUpPage()[pri:0, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:38:01 IST" name="setUpPage" finished-at="2026-01-04T19:38:01 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method is-config="true" signature="setUpPage()[pri:0, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:38:03 IST" name="setUpPage" finished-at="2026-01-04T19:38:03 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method signature="verifyResetButton()[pri:6, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:38:03 IST" name="verifyResetButton" finished-at="2026-01-04T19:38:04 IST" duration-ms="1424" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyResetButton -->
+        <test-method signature="verifyEnrollmentSort()[pri:7, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:38:04 IST" name="verifyEnrollmentSort" finished-at="2026-01-04T19:38:07 IST" duration-ms="2589" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEnrollmentSort -->
+        <test-method is-config="true" signature="setUpPage()[pri:0, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:38:04 IST" name="setUpPage" finished-at="2026-01-04T19:38:04 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method is-config="true" signature="setUpPage()[pri:0, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:38:07 IST" name="setUpPage" finished-at="2026-01-04T19:38:07 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPage -->
+        <test-method signature="verifyCourseNameSort()[pri:8, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:38:07 IST" name="verifyCourseNameSort" finished-at="2026-01-04T19:38:10 IST" duration-ms="2638" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCourseNameSort -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TablePageTest@3b69e7d1]" started-at="2026-01-04T19:38:10 IST" name="tearDown" finished-at="2026-01-04T19:38:13 IST" duration-ms="3607" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.HomePageTest -->
-    </test> <!-- Home Page Test -->
-    <test started-at="2025-12-31T18:18:31 IST" name="Pactice Page Test" finished-at="2025-12-31T18:18:42 IST" duration-ms="10171">
-      <class name="testCases.PracticePageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.PracticePageTest@2cd76f31]" started-at="2025-12-31T18:18:31 IST" name="setup" finished-at="2025-12-31T18:18:35 IST" duration-ms="3560" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUpPage()[pri:0, instance:testCases.PracticePageTest@2cd76f31]" started-at="2025-12-31T18:18:35 IST" name="setUpPage" finished-at="2025-12-31T18:18:35 IST" duration-ms="7" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpPage -->
-        <test-method signature="testNavigation()[pri:0, instance:testCases.PracticePageTest@2cd76f31]" started-at="2025-12-31T18:18:35 IST" name="testNavigation" finished-at="2025-12-31T18:18:38 IST" duration-ms="3099" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testNavigation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.PracticePageTest@2cd76f31]" started-at="2025-12-31T18:18:38 IST" name="tearDown" finished-at="2025-12-31T18:18:42 IST" duration-ms="3486" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases.PracticePageTest -->
-    </test> <!-- Pactice Page Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- testCases.TablePageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

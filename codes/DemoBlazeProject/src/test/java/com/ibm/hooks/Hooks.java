@@ -1,5 +1,6 @@
 package com.ibm.hooks;
 
+import java.net.MalformedURLException;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -13,9 +14,10 @@ public class Hooks {
 	public static WebDriver driver;
 	
 	@Before
-	public void setUp() {
+	public void setUp() throws MalformedURLException {
 		System.out.println("Launching browser...");
 		driver=new ChromeDriver();
+		 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		

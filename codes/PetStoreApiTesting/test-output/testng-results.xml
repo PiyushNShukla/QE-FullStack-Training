@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-01-07T13:00:41 IST" name="Default suite" finished-at="2026-01-07T13:00:56 IST" duration-ms="14747">
+    <groups>
+    </groups>
+    <test started-at="2026-01-07T13:00:41 IST" name="Default test" finished-at="2026-01-07T13:00:56 IST" duration-ms="14747">
+      <class name="com.ibm.tests.PetTests">
+        <test-method signature="addPetInfo()[pri:0, instance:com.ibm.tests.PetTests@67c27493]" started-at="2026-01-07T13:00:41 IST" name="addPetInfo" finished-at="2026-01-07T13:00:47 IST" duration-ms="5476" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPetInfo -->
+        <test-method signature="getPetsByStatus()[pri:0, instance:com.ibm.tests.PetTests@67c27493]" started-at="2026-01-07T13:00:47 IST" name="getPetsByStatus" finished-at="2026-01-07T13:00:49 IST" duration-ms="2055" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPetsByStatus -->
+        <test-method signature="getPetById()[pri:0, instance:com.ibm.tests.PetTests@67c27493]" started-at="2026-01-07T13:00:49 IST" name="getPetById" finished-at="2026-01-07T13:00:50 IST" depends-on-methods="com.ibm.tests.PetTests.addPetInfo" duration-ms="1159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPetById -->
+        <test-method signature="updatePetByFormData()[pri:0, instance:com.ibm.tests.PetTests@67c27493]" started-at="2026-01-07T13:00:50 IST" name="updatePetByFormData" finished-at="2026-01-07T13:00:51 IST" depends-on-methods="com.ibm.tests.PetTests.addPetInfo" duration-ms="1168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updatePetByFormData -->
+        <test-method signature="updatePetInfo()[pri:0, instance:com.ibm.tests.PetTests@67c27493]" started-at="2026-01-07T13:00:51 IST" name="updatePetInfo" finished-at="2026-01-07T13:00:53 IST" depends-on-methods="com.ibm.tests.PetTests.addPetInfo" duration-ms="1433" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updatePetInfo -->
+        <test-method signature="uploadPetImage()[pri:0, instance:com.ibm.tests.PetTests@67c27493]" started-at="2026-01-07T13:00:53 IST" name="uploadPetImage" finished-at="2026-01-07T13:00:55 IST" depends-on-methods="com.ibm.tests.PetTests.addPetInfo" duration-ms="2300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uploadPetImage -->
+        <test-method signature="deletePetInfo()[pri:0, instance:com.ibm.tests.PetTests@67c27493]" started-at="2026-01-07T13:00:55 IST" name="deletePetInfo" finished-at="2026-01-07T13:00:56 IST" depends-on-methods="com.ibm.tests.PetTests.getPetById" duration-ms="1027" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletePetInfo -->
+      </class> <!-- com.ibm.tests.PetTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
