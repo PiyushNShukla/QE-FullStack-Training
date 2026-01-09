@@ -87,6 +87,7 @@ public class PetTests {
 	  .pathParam("petId",101)
 	  .formParam("additionalMetadata","This is a Cat image")
 	  .multiPart("file",image,"image/jpeg")
+	  
 	  .when().post("/{petId}/uploadImage")
 	  .then().statusCode(200)
 	  .body("message", containsString("File uploaded"));

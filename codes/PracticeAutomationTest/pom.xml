@@ -4,6 +4,21 @@
   <artifactId>PracticeAutomationTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  <build>
+  <plugins>
+  <plugin>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <configuration>
+    <suiteXmlFiles>
+      <suiteXmlFile>practice-suite.xml</suiteXmlFile>
+    </suiteXmlFiles>
+  </configuration>
+</plugin>
+  
+  </plugins>
+  
+ </build>
+  
   <dependencies>
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
