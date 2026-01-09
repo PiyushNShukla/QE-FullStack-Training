@@ -6,12 +6,18 @@
       <class name="testCases.HomePageTest"/>
     </classes>
   </test> <!-- Test -->
+  
   <test name="Pactice Page Test">
-  
-  <classes>
+   <classes>
   	<class name="testCases.PracticePageTest"/>
-  	 
   </classes>
+   </test>
   
+  <test name="Table Page Test">
+  
+    <classes>
+      <class name="testCases.TablePageTest"/>
+    </classes>
   </test>
+  
 </suite> <!-- Suite -->
